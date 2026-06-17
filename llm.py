@@ -44,5 +44,6 @@ result = generator(
     clean_up_tokenization_spaces=True
 )  # Génération de la réponse du modèle avec les paramètres spécifiés
 
+answer = result[0]['generated_text'].split("<|assistant|>")[-1]  # Récupération du texte généré par le modèle
 print("\n--- Résumé du compte rendu ---")  # Affichage du titre pour le résumé
-print(result[0]['generated_text'])  # Affichage du texte généré par le modèle
+print(answer.strip())  # Affichage du texte généré par le modèle
