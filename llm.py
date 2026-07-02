@@ -21,14 +21,17 @@ messages = [
     {
         "role": "system", 
         "content": (
-            "Tu es un médecin vulgarisateur. Résume le document fourni en 3 phrases courtes "
-            "et simples maximum. Sois direct, ne fais pas d'introduction (ne dis pas 'Voici le résumé') "
-            "et va droit au but. Arrête-toi immédiatement après le point final de la 3ème phrase."
+            "Tu es un assistant expert en diagnostic médical. Analyse le document clinique fourni.\n"
+            "Génère une réponse structurée en trois parties distinctes :\n"
+            "1) SYNTHÈSE : Les symptômes cardinaux identifiés.\n"
+            "2) HYPOTHÈSES DIAGNOSTIQUES : Liste les 2 ou 3 pathologies les plus probables au vu des données floues. "
+            "Pour chacune, donne un court argument médical (ne donne pas de pourcentage strict).\n"
+            "3) RECOMMANDATIONS : Quels examens complémentaires (biologie, imagerie) suggères-tu pour affiner le diagnostic ?"
         )
     },
     {
         "role": "user", 
-        "content": f"Voici le document : {text}"
+        "content": f"Voici le document clinique : {text}"
     }
 ]
 
